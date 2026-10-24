@@ -1,3 +1,4 @@
+
 import express from 'express';
 import cors from 'cors';
 
@@ -19,15 +20,14 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   'http://127.0.0.1:5173',
-  https://dincom-poultry-frontend.onrender.com
-  // Add the deployed frontend URL here when available.
+  'https://dincom-poultry-frontend.onrender.com',
 ];
 
 app.use(
   cors({
     origin(origin, callback) {
-      // Allow requests without an Origin header, such as server-to-server
-      // requests and command-line API tools.
+      // Allow requests without an Origin header, such as
+      // server-to-server requests and command-line API tools.
       if (!origin || allowedOrigins.includes(origin)) {
         return callback(null, true);
       }
@@ -99,3 +99,4 @@ app.use((error, req, res, next) => {
 });
 
 export default app;
+
