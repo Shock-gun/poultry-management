@@ -19,6 +19,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   'http://127.0.0.1:5173',
+  https://dincom-poultry-frontend.onrender.com
   // Add the deployed frontend URL here when available.
 ];
 
